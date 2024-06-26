@@ -5,8 +5,6 @@ const SimpleCard = ({ pokemonData }: any) => {
   const { getPokemonDetails } = useFetchPokemon();
   const [pokemonDetails, setPokemonDetails] = useState();
 
-  console.log({ pokemonData }, { pokemonDetails });
-
   useEffect(() => {
     getPokemonDetails(pokemonData.url).then((data) => {
       setPokemonDetails(data);

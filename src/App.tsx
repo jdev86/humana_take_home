@@ -47,8 +47,6 @@ function App() {
     setFilteredPokemonList([...filteredPokemonList, card]);
   }, [originalPokemonList, filteredPokemonList]);
 
-  console.log({ filteredPokemonList });
-
   return (
     <Stack>
       <Box sx={{ padding: 5 }}>
@@ -77,7 +75,6 @@ function App() {
       {/* @ts-expect-error */}
       <Grid container spacing={4} justify="center">
         {filteredPokemonList?.map((p) => {
-          console.log({ p });
           return (
             <Grid item xs={12} sm={6} md={4}>
               <Card pokemonData={p} />
